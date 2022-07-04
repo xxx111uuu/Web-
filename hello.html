@@ -1,0 +1,283 @@
+<!DOCTYPE html><!--约束，生命-->
+<html lang="zh_CN"><!--html标签表示html的开始 lang=‘zh_CN’表示中文 html标签中一般分为两部分，head和body-->
+<head><!-- 表示头部信息，一般包含三部分:title标签，css样式，js代码 -->
+    <meta charset="UTF-8"><!-- 表示当前页面使用 UTF-8字符集 -->
+    <title>标题</title><!--表示标题-->
+    <!--CSS选择器，只能在head里面写可以"封装"且DIV里的注释用/*  */-->
+    <!--普通的标签选择器-->
+    <!--<style type="text/css">
+        div{
+            border:1px solid yellow;
+            color: blue;
+            font-size: 30px;
+
+        }
+        span {
+            border: 1px dashed purple;
+            color: green;
+            font-size: 50px;
+
+        }
+    </style>-->
+    <!-- link标签用来引入CSS代码-->
+    <!-- <link rel="stylesheet" type="text/css" href="1.css"/>-->
+    <!--CSS ID选择器-->
+    <style type="text/css">
+        #id001{
+            color: blue;
+            font-size: 30px;
+            border: 1px yellow solid;
+        }
+        #id002{
+            color: red;
+            font-size: 20px;
+            border: 5px blue dotted;
+        }
+    </style>
+    <!-- CSS 类型选择器 -->
+    <style type="text/css">
+        .A{
+           color: blue;
+            font-size: 30px;
+            border: 1px red solid;
+        }
+        .B{
+            color: purple;
+            font-size: 20px;
+            border: 2px green dashed;
+        }
+    </style>
+    <!-- 组合选择器 可以让多个选择器共用同一个CSS代码-->
+    <style type="text/css">
+        .C,#id003{
+            color: black;
+            font-size: 40px;
+            border: 3px red solid;
+        }
+    </style>
+
+</head>
+<!--<body onclick="alert('so bad!')">--><!-- body标签是中整个html页面显示的主体内容 -->
+<hr/>    Hello，World！<br/><hr/>
+    <h1 style="font-family: Arial;color: red;font-size:20px;">So so bad!</h1>
+       bad ,ba &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d!
+       &lt;br &gt;
+    <a href="http://www.baidu.com" target="_self">百度</a>
+    <a href="http://www.taobao.com" target="_blank">淘宝</a>
+    <ul> <li>张三</li></ul>
+    <a href="http://localhost:8080">本地</a>
+    <table align="center" border="1" cellspacing="0" width="200" height="200"><!--cellspacing设置单元格间距，表格相对与页面居中-->
+        <tr>
+            <th>1.1</th>
+            <th>1.2</th>
+            <th>1.3</th>
+        </tr>
+        <tr>
+            <th>2.1</th>
+            <th>2.2</th>
+            <th>2.3</th>
+        </tr>
+        <tr>
+            <th>3.1</th>
+            <th>3.2</th>
+            <th>3.3</th>
+        </tr>
+
+    </table>
+  <!--跨行跨列表格-->
+    <table   border="1" width="500" height="500" cellspacing="0">
+        <tr>
+            <td colspan="2">1.1</td> <!--colspan=""设置单元格跨列 rowspan=""设置单元格跨行 -->
+
+            <td>1.3</td>
+            <td>1.4</td>
+            <td>1.5</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2.1</td>
+            <td>2.2</td>
+            <td>2.3</td>
+            <td>2.4</td>
+            <td>2.5</td>
+        </tr>
+        <tr>
+
+            <td>3.2</td>
+            <td>3.3</td>
+            <td>3.4</td>
+            <td>3.5</td>
+        </tr>
+        <tr>
+            <td>4.1</td>
+            <td>4.2</td>
+            <td>4.3</td>
+            <td colspan="2" rowspan="2">4.4</td>
+        </tr>
+        <tr>
+            <td>5.1</td>
+            <td>5.2</td>
+            <td>5.3</td>
+        </tr>
+    </table>
+<!-- iframe 内嵌窗口,内联窗口-->
+<!-- <iframe name="frame" src="hello.html"/> -->
+<ul>
+    <li>
+        <a href="hello.html" target="frame">hello</a>
+    </li>
+</ul>
+<!-- 表单标签 -->
+<form action="http://www.baidu.com" method="get"><!-- form标签就是表单 action属性设置表单提交的服务器地址 method属性设置提交的方式 get(默认值）,post-->
+    <h1 align="center"> 用户注册表单</h1>
+    <input type="hidden" name="action" value="login"/>
+    <table align="center">
+        <tr>
+            <td>
+                用户名称：
+            </td>
+            <td>
+                <input type="text" value="默认值"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                用户密码：
+            </td>
+            <td>
+                <input type="password"/><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                确认密码：
+            </td>
+            <td>
+                <input type="password"/><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                性别：
+            </td>
+            <td>
+                <input type="radio"name="sex"checked="checked"/>男
+                <input type="radio"name="sex"/>女
+            </td>
+        </tr>
+        <tr>
+            <td>
+                兴趣爱好：
+            </td>
+            <td>
+                <input type="checkbox"/> Java<input type="checkbox"/> C++<input type="checkbox"/> Python <input type="checkbox"/>JSP <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                国籍：
+            </td>
+            <td>
+                <select >
+                    <option selected="selected">---请选择国籍--</option>
+                    <option>中国</option>
+                    <option>美国</option>
+                    <option>日本</option>
+                    <option>印度</option>
+                    <option>法国</option>
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                自我评价：
+            </td>
+            <td>
+                <textarea row="30" cols="30">输入你的内容
+    </textarea><br/><!--多行文本输入框 row表示有几行 cols表示每行可以有多少个字符-->
+
+            </td>
+        </tr>
+        <tr>
+         <td>
+             <input type="reset"/> 重置<br/>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit"/>提交 <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="file"/> <br/>
+            </td>
+        </tr>
+
+    </table>
+  <!--  用户名称：<input type="text" value="默认值"/>&lt;!&ndash;input 文本输入框，单行 &ndash;&gt;<br/>
+    用户密码：<input type="password"/><br/>
+    确认密码：<input type="password"/><br/>
+    性别：<input type="radio" name="sex" checked="checked"/>男 <input type="radio"name="sex"/>女 <br/>&lt;!&ndash;radio单选框 同时可以进行分组同一组的只能选一个 checked="checked"表示默认选中&ndash;&gt;
+    兴趣爱好：<input type="checkbox"/> Java<input type="checkbox"/> C++<input type="checkbox"/> Python <input type="checkbox"/>JSP <br/>
+    国籍:<select>
+        <option selected="selected">-&#45;&#45;请选择国籍&#45;&#45;</option>
+        <option>中国</option>
+        <option>美国</option>
+        <option>日本</option>
+        <option>印度</option>
+        <option>法国</option>
+    </select>
+    自我评价：<textarea row="30" cols="30">输入你的内容
+    </textarea><br/>&lt;!&ndash;多行文本输入框 row表示有几行 cols表示每行可以有多少个字符&ndash;&gt;
+    <input type="reset"/> <br/>
+    <input type="submit"/><br/>
+    <input type="file"/><br/>
+    <input type="hidden"/>&lt;!&ndash;服务于程序，用户看不见 &ndash;&gt;
+-->
+
+</form>
+<!--div,span,p标签-->
+<div>
+    div标签1 <!--默认独占一行-->
+</div>
+<div>
+    div标签2
+</div>
+<span><!--长度是封装数据的长度-->
+    span标签1
+</span>
+<span>
+    span标签2
+</span>
+<p><!--默认在上方或下方各空出一行-->
+    段落标签1
+</p>
+<p>
+  <b>段落标签2</b>
+</p>
+<!--CSS,style属性-->
+<div >
+    div标签1 <!--默认独占一行-->
+</div>
+<div  >
+    div标签2
+</div>
+<span  ><!--长度是封装数据的长度-->
+    span标签1
+</span>
+<span  >
+    span标签2
+</span>
+
+<div id="id001"> div标签id001</div>
+<div id="id002"> div标签id002</div>
+<div class="A"> div标签A</div>
+<div class="B"> div标签B</div>
+<span class="A">span标签A</span><br/>
+<span class="B">span标签B</span>
+<div class="C">div标签C</div>
+<div id="id003">div标签id003</div>
+<button onclick="alert('警告')"></button>
+</body>
+</html>
